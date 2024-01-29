@@ -4,7 +4,7 @@ const GoogleAnalytics = ({ TRACKING_ID }) => {
   return (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${RACKING_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${TRACKING_ID}`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
