@@ -84,7 +84,7 @@ export default function Projects() {
 
         .footer {
           color: white;
-          position: absolute;
+          position: fixed;
           bottom: 0;
           width: 100%;
           text-align: center;
