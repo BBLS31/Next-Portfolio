@@ -44,7 +44,7 @@ const Navbar = () => {
           border-bottom: 1.5px solid black;
           border-radius: 10px;
           font-size: 20px;
-          position: fixed;
+          position: absolute;
           top: 0;
           width: 100%;
         }

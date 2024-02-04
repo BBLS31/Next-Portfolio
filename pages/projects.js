@@ -1,19 +1,22 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React from "react";
+import Layout from "../components/Layout";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Projects() {
   return (
     <Layout>
+      {/* Using the Layout component as a wrapper */}
       <div>
         <h3 className="header">
           Here are some of the projects I've been working on :
         </h3>
         <div className="card-container">
+          {/* using card components to display my work */}
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src="/images/Screenshot (243).png" />
+            {/* displaying images of the work */}
 
             <Card.Body>
               <Card.Title>iSearch</Card.Title>
@@ -63,6 +66,7 @@ export default function Projects() {
         </p>
       </div>
 
+      {/* Defining styles using styled-jsx */}
       <style jsx>{`
         .card-container {
           display: flex;
@@ -84,7 +88,7 @@ export default function Projects() {
 
         .footer {
           color: white;
-          position: absolute;
+          position: fixed;
           bottom: 0;
           width: 100%;
           text-align: center;

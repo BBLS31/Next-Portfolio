@@ -1,10 +1,9 @@
-import Image from "next/image";
-import next from "next";
 import Layout from "../components/Layout";
 
 function Contact() {
   return (
     <Layout>
+      {/* Using the Layout component as a wrapper */}
       <div className="centered-content">
         <h2>You can reach me at:</h2>
         <div className="contacts">
@@ -17,6 +16,7 @@ function Contact() {
         </div>
       </div>
 
+      {/* Defining styles using styled-jsx */}
       <style jsx>{`
         .centered-content {
           display: flex;
@@ -27,10 +27,10 @@ function Contact() {
           color: white;
         }
 
-        .contacts{
+        .contacts {
           border: 2px solid gray;
           border-radius: 10px;
-          background-color: rgba(0, 0, 0, 0.5)
+          background-color: rgba(0, 0, 0, 0.5);
         }
       `}</style>
     </Layout>
