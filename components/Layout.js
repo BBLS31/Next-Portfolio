@@ -6,17 +6,17 @@ import ReactGA from "react-ga4";
 
 function Layout(props) {
 
-  ReactGA.initialize("G-72VQHGXVWF");
-
-  ReactGA.send({
-    hitType: "pageview",
-    page: window.location.pathname,
-  });
+  useEffect(() => {
+    ReactGA.initialize("G-72VQHGXVWF");
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname,
+    });
+  }, []);
 
   return (
     <div className="page-layout">
       <Head>
-        <GoogleAnalytics TRACKING_ID={process.env.TRACKING_ID} />
         <link
           rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
