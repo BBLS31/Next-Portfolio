@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import Head from "next/head";
 import ReactGA from "react-ga4";
+import { useEffect } from "react";
 
 
 function Layout(props) {
