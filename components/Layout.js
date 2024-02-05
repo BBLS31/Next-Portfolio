@@ -49,16 +49,56 @@ function Layout(props) {
         autoPlay
         muted
         loop
-        style={{
-          position: "fixed",
-          right: -215,
-          bottom: -200,
-          minWidth: "100%",
-          minHeight: "100%",
-          zIndex: -1,
-        }}
         className="video"
       />
+
+      <style jsx>{`
+        .video {
+          position: fixed;
+          right: -215px;
+          bottom: -200px;
+          min-width: 100%;
+          min-height: 100%;
+          z-index: -1;
+        }
+
+        /* Media query for medium desktop screens */
+        @media (min-width: 992px) and (max-width: 1199px) {
+          .video {
+            position: fixed;
+            right: -370px;
+            bottom: -200px;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+          }
+        }
+
+        /* Media query for small desktop screens */
+        @media (min-width: 768px) and (max-width: 991px) {
+          .video {
+            position: fixed;
+            right: -480px;
+            bottom: -200px;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+          }
+        }
+
+        /* Media query for tablet devices */
+        @media (max-width: 768px) {
+          .video {
+            position: fixed;
+            right: -595px;
+            bottom: -200px;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+          }
+        }
+      `}</style>
+
       <Navbar />
     </div>
   );
