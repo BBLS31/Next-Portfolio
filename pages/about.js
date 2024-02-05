@@ -3,15 +3,7 @@ import Image from "next/image";
 import profilePhoto from "../public/images/profile.jpeg";
 
 // Defining a style object for the profile picture.
-const profileStyle = {
-  borderRadius: 50,
-  overflow: "hidden",
-  width: 250,
-  height: 350,
-  position: "relative",
-  bottom: 190,
-  left: 200,
-};
+
 
 export default () => (
   <Layout>
@@ -40,29 +32,89 @@ export default () => (
         </h3>
       </div>
       {/* Creating a div with class 'profile' for the profile picture. */}
-      <div style={profileStyle} className="profile">
+      <div className="profile">
         {/* Displaying the profile picture with the specified style */}
-        <Image src={profilePhoto} layout="fill" objectFit="cover" />
+        <Image src={profilePhoto} alt="Profile Photo" />
       </div>
     </div>
 
     {/* Defining additional styles using styled-jsx */}
     <style jsx>{`
+      .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        gap: 50px;
+        margin-top: 20%;
+      }
+
+      .profile :global(img) {
+        border-radius: 15%;
+        height: 390px;
+        width: 275px;
+        order: 1;
+      }
+
       .text {
-        position: relative;
-        top: 290px;
-        left: 600px;
         text-align: center;
         color: white;
         background-color: rgba(0, 0, 0, 0.5);
         border: 5px solid gray;
         border-radius: 10px;
-        width: 1000px;
+        width: 60%;
+        order: 2;
       }
-      .about {
-        position: relative;
-        bottom: 170px;
-        right: 80px;
+
+      /* Media query for medium desktop screens */
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .text {
+          width: 100%;
+        }
+        .about {
+          height: 100vh;
+          width: 100%;
+          gap: -100px;
+        }
+      }
+
+      /* Media query for small desktop screens */
+      @media (min-width: 768px) and (max-width: 991px) {
+        .text {
+          width: 100%;
+        }
+        .about {
+          height: 100vh;
+          width: 100%;
+          margin-top: 30%;
+        }
+      }
+
+      /* Media query for tablet devices */
+      @media (max-width: 768px) {
+        .about {
+          height: 100vh;
+          width: 100%;
+          margin-top: 53%;
+        }
+
+        .text {
+          width: 100%;
+        }
+      }
+
+      /* Media query for mobile devices */
+      @media (max-width: 480px) {
+        .about {
+          height: 100vh;
+          width: 100%;
+          margin-top: 50%
+        }
+        .text {
+          width: 100%;
+        }
       }
     `}</style>
   </Layout>
