@@ -1,4 +1,4 @@
-# Isearch app instuctions
+# Next Portfolio instuctions
 
 ### How to download the project:
 * Open this link: https://github.com/BBLS31/Next-Portfolio.git
